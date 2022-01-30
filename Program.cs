@@ -16,7 +16,7 @@ namespace LKS_Vaksin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MasterDokter());
+            Application.Run(new Splash());
         }
     }
 }

@@ -171,7 +171,7 @@ namespace LKS_Vaksin
                 int userid = Convert.ToInt32(reader["id"]);
                 connection.Close();
 
-                string comm = "insert into warga values('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "', '" + textBox4.Text + "', '" + textBox5.Text + "', " + userid + ")";
+                string comm = "insert into warga values('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "', '" + textBox5.Text + "', '" + textBox4.Text + "', " + userid + ")";
                 try
                 {
                     Command.exec(comm);
@@ -188,7 +188,7 @@ namespace LKS_Vaksin
             }
             else if (cond == 2 && val_up())
             {
-                string com = "update warga set nik = '" + textBox1.Text + "', nama = '" + textBox2.Text + "', alamat = '" + textBox4.Text + "', noHp = '" + textBox5.Text + "', tempat_lahir = '" + textBox3.Text + "', tanggal_lahir = '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' where id_user = " + id;
+                string com = "update warga set nik = '" + textBox1.Text + "', nama = '" + textBox2.Text + "', alamat = '" + textBox5.Text + "', noHp = '" + textBox4.Text + "', tempat_lahir = '" + textBox3.Text + "', tanggal_lahir = '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' where id_user = " + id;
                 try
                 {
                     Command.exec(com);

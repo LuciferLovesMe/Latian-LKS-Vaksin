@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataWarga.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataWarga.Designer.cs">
       <DependentUpon>DataWarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailVaksin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailVaksin.Designer.cs">
+      <DependentUpon>DetailVaksin.cs</DependentUpon>
     </Compile>
     <Compile Include="MainAdmin.cs">
       <SubType>Form</SubType>
@@ -94,6 +113,12 @@
     <Compile Include="MasterWarga.Designer.cs">
       <DependentUpon>MasterWarga.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowReport.Designer.cs">
+      <DependentUpon>ShowReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +134,16 @@
     <Compile Include="Vaksinasi.Designer.cs">
       <DependentUpon>Vaksinasi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataWarga.resx">
+      <DependentUpon>DataWarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailVaksin.resx">
+      <DependentUpon>DetailVaksin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainAdmin.resx">
       <DependentUpon>MainAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,8 +174,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShowReport.resx">
+      <DependentUpon>ShowReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaksinasi.resx">
+      <DependentUpon>Vaksinasi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -154,6 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

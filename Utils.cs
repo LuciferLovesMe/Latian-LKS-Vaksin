@@ -53,4 +53,9 @@ namespace LKS_Vaksin
         public static string nama { set; get; }
         public static int level { set; get; }
     }
+
+    class Selected
+    {
+        public static int id { set; get; }
+    }
 }
